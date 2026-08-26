@@ -18,6 +18,7 @@ const ICONS = [{
 
 
 const COUNTRIES = [{
+    
     code: "gh", 
     name: "Ghana",
     flag: "🇬🇭",
@@ -78,7 +79,7 @@ const COUNTRIES = [{
         equivalent: "🇳🇬 ehn-ehn (repeated rapidly)",
        
 
-    
+         }],
 
 
    code: "ng", 
@@ -164,8 +165,8 @@ const COUNTRIES = [{
         usage_tip: "chotto (That is a bit...) instead",
         equivalent: "🇺🇸 'Nah'/🇧🇴  'tsk-tsk'",
       
-    
-}],
+         }],
+
 
     code: "jm", 
     name: "Jamaica",
@@ -212,7 +213,6 @@ const COUNTRIES = [{
         context: "Non-verbal expression. Intensity changes meaning from serious to playful",
         usage_tip: "",
 
-     
         id: "jm-5",
         type:"lip gesture",
         icon: "🟡",
@@ -244,6 +244,8 @@ const COUNTRIES = [{
         context: "used when annoyed",
         equivalent: "🇺🇸 'Damn!/Pfft!'/🇧🇴 abrupt 'Aah' (high pitch)",
 
+    }],
+
         code:'pt',
         label: "Portugal",
         flags:'🇵🇹',
@@ -265,6 +267,8 @@ const COUNTRIES = [{
             context: "Friends, family, casual meetings",
             usage_tip: "Lean in. Don't actually kiss, Start right",
             equivalent: "🇬🇧 'Alright mate?'",
+
+        }],
 
 
 
@@ -302,7 +306,7 @@ const COUNTRIES = [{
             usage_tip: "Use with caution. Can seem rude if overused",
             equivalent: "🇬🇧 Nah'",
 
-
+       }],
 
         code:'gr',
         label: "Greece",
@@ -355,15 +359,60 @@ const COUNTRIES = [{
 
 
       
-        }]
+        }],
+
+         code:'uk',
+        label: "United Kingdom",
+        flags:'🇬🇬🇧',
+        mannerisms: [{
+            // id: "gr-1",
+            // type: "gesture",
+            // icon: "🟢",
+            // title: "Nod up",
+            // meaning: "yes, approval",
+            // context: "Friendly agreement",
+            // usage_tip: "safe to use. Slight upward nod",
+
+            // id: "gr-2",
+            // type: "sound",
+            // icon: "🟢",
+            // title: "Opa!",
+            //  // image: "",
+            // meaning: "Expression of hoy, celebration, encouragement 'Whoops' ",
+            // context: "Weddings, dancing, plate breaking, spilling something, dancing the syrtaki",
+            // usage_tip: "safe to use. Shout it when excited, when someone dances well, or when you drop something. Gets louder with more retsina🍷",
+            // equivalent: "🇬🇧 'Oops!', 'Woo', 'Let's go'",
+
+            // id: "gr-3",
+            // type: "gesture",
+            // icon: "🟡",
+            // title: "Palm out 'Mooutza'",
+            //  // image: "",
+            // meaning: "Stop/Get lost",
+            // context: "Non-verbal insult",
+            // usage_tip: "Exercise caution. Only use playfully with close friends",
+            // equivalent: "🇬🇧 'nope''",
+
+
+            // id: "gr-4",
+            // type: "gesture",
+            // icon: "🔴",
+            // title: "Thumbs up 👍",
+            //  // image: "",
+            // meaning: "Offensive gesture",
+            // context: "Can mean 'up yours'",
+            // usage_tip: "May offend if used, avoid!",
+            // equivalent: "🇬🇧 'Up yours''",
+
+
           }]
-            }]
+          }]
+        
 
       
     
-}],
 
 
 
-}]
-}]
+
+
