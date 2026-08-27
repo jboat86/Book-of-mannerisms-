@@ -1,31 +1,57 @@
-const ICONS = [{
+// Traffic light for instruction signals
+const SIGNAL = [{
     
     color: "green",
-    signal: "🟢",
+    emoji: "🟢",
     label: "safe to use", 
 
     color: "amber",
-    signal: "🟡",
+    emoji: "🟡",
     label: "could use but exercise caution, depends on situation", 
 
     color: "red",
-    signal: "🔴",
+    emoji: "🔴",
     label: " may offend if used, avoid!", 
 }]
 
 
+    // Mannerism Category
+  
+const CATEGORY = [{ 
+    
+    
+    type: "vocal",
+    emoji: "🗣",
+},
+
+{
+
+    type: "gesture",
+    emoji: "👋",
+},
+{
+
+    type: "eye contact",
+    emoji: "👀" ,
+},
+
+{
+   
+    type: "distance",
+    emoji: "📐",
+},
+]
 
 
-
-const COUNTRIES = [{
+const COUNTRY = [{
     
     code: "gh", 
     name: "Ghana",
     flag: "🇬🇭",
-    mannerisms: [{
+    mannerisms: [{                     
         id: "gh-1",
         type:"sound",
-        icon: "🟢",
+       signal: "🟢",
         title: "Eii",
         // image: "",
         // audio: "",
@@ -36,30 +62,30 @@ const COUNTRIES = [{
         
         id: "gh-2",
         type:"sound",
-        icon: "🟢",
-        title: "Hmmm",
+        signal: "🟢",
+        title: "Hmmm!",
          // image: "",
          // audio: "",
         meaning: "worry",
         context: "Friend delivers bad news",
         usage_tip: "use when you someone vents to you about their problem/s",
-        equivalent: "🇳🇬 Chai",
+        equivalent: "🇳🇬 Chai!",
 
 
         id: "gh-3",
         type:"sound",
-        icon: "🟢",
-        title: "'Eh-hen'",
+        signal: "🟢",
+        title: "'Eh-hen?'",
          // image: "",
          // audio: "",
         meaning: "'I'm listening'",
         context: "Listening during a convversation",
         usage_tip: "use during a conversation to sound like a local but optional",
-        equivalent: "🇳🇬 Chai",
+        equivalent: "",
 
         id: "gh-4",
         type:"sound",
-        icon: "🟡",
+        signal: "🟡",
         title: "'Ahaa' (medium to high pitch)",
          // image: "",
          // audio: "",
@@ -71,7 +97,7 @@ const COUNTRIES = [{
 
         id: "gh-5",
         type:"sound",
-        icon: "🔴",
+        signal: "🔴",
         title: "tsk-tsk",
          // audio: "",
         meaning: "disagreement, refusal, end of discussion",
@@ -88,7 +114,7 @@ const COUNTRIES = [{
     mannerisms: [{
         id: "ng-1",
         type:"sound",
-        icon: "🟢",
+        signal: "🟢",
         title: "Ah-Ah",
          // image: "",
         meaning: "shock, surprise, disbelief",
@@ -98,7 +124,7 @@ const COUNTRIES = [{
         
         id: "ng-2",
         type:"sound",
-        icon: "🟡",
+        signal: "🟡",
         title: "ehn!",
          // image: "",
         meaning: "shock, surprise",
@@ -108,7 +134,7 @@ const COUNTRIES = [{
 
         id: "ng-3",
         type:"sound",
-        icon: "🔴",
+        signal: "🔴",
         title: "ehn-ehn",
          // image: "",
         meaning: "disagreement, refusal, end of discussion",
@@ -117,7 +143,7 @@ const COUNTRIES = [{
 
         id: "ng-4",
         type:"sound",
-        icon: "🔴",
+        signal: "🔴",
         title: "chai!",
          // image: "",
         meaning: "worry",
@@ -133,7 +159,7 @@ const COUNTRIES = [{
     mannerisms: [{
         id: "jp-1",
         type:"sound",
-        icon: "🟢",
+        signal: "🟢",
         title: "Hai",
          // image: "",
         //  audio: "",
@@ -145,7 +171,7 @@ const COUNTRIES = [{
         
         id: "jp-2",
         type:"sound",
-        icon: "🟡",
+        signal: "🟡",
         title: "E?",
          // image: "",
         //  audio: "",
@@ -156,7 +182,7 @@ const COUNTRIES = [{
 
         id: "jp-3",
         type:"sound",
-        icon: "🔴",
+        signal: "🔴",
         title: "Nuh-uh",
          // image: "",
         //  audio: "",
@@ -174,7 +200,7 @@ const COUNTRIES = [{
     mannerisms: [{
         id: "jm-1",
         type:"hand gesture",
-        icon: "🟢",
+        signal: "🟢",
         title: "Hand on chest",
          // image: "",
         meaning: "'one love', 'Hello' ",
@@ -185,7 +211,7 @@ const COUNTRIES = [{
 
         id: "jm-2",
         type: "sound + head movement (lower chin)",
-        icon: "🟢", 
+        signal: "🟢", 
         title: "Wah gwan",
          // audio: "",
         meaning: "Hello, What's up",
@@ -195,7 +221,7 @@ const COUNTRIES = [{
         
         id: "jm-3",
         type:"sound",
-        icon: "🟡",
+        signal: "🟡",
         title: "E?",
          // image: "",
         //  audio: "",
@@ -206,7 +232,7 @@ const COUNTRIES = [{
 
         id: "jm-4",
         type: "sound",
-        icon: "🟡/🔴",
+        signal: "🟡/🔴",
         title: "'Mchew'/Teeth sucking sound",
          // image: "",
         meaning: "annoyance, disagreement and expressing tiredness/exhaustion",
@@ -215,7 +241,7 @@ const COUNTRIES = [{
 
         id: "jm-5",
         type:"lip gesture",
-        icon: "🟡",
+        signal: "🟡",
         title: "pointing with lips",
          // image: "",
         context: "directing attention without using hands usually at someone",
@@ -225,7 +251,7 @@ const COUNTRIES = [{
 
         id: "jm-6",
         type:"sound",
-        icon: "🔴",
+        signal: "🔴",
         title: "Nuh-sah",
          // image: "",
         //  audio: "",
@@ -236,7 +262,7 @@ const COUNTRIES = [{
 
         id: "jm-7",
         type:"sound",
-        icon: "🔴",
+        signal: "🔴",
         title: "'Chah!' (said abruptly)",
          // image: "",
         // audio: "" ,
@@ -252,7 +278,7 @@ const COUNTRIES = [{
         mannerisms: [{
             id: "pt-1",
             type: "sound",
-            icon: "🔴",
+            signal: "🔴",
             title: "OK Sign 👌",
             meaning: "Can mean 'zero' or 'worthless'",
             context: "Non-verbal. Can be offensive",
@@ -261,7 +287,7 @@ const COUNTRIES = [{
      
             id: "pt-2",
             type: "gesture",
-            icon: "🟢",
+            signal: "🟢",
             title: "Cheek Kisses",
             meaning: "Greeting - 2 kisses, right cheek first",
             context: "Friends, family, casual meetings",
@@ -278,7 +304,7 @@ const COUNTRIES = [{
         mannerisms: [{
             id: "tr-1",
             type: "gesture",
-            icon: "🔴",
+            signal: "🔴",
             title: "Thumbs up 👍",
              // image: "",
             meaning: "Can be vulgar, like middle finger",
@@ -288,7 +314,7 @@ const COUNTRIES = [{
 
             id: "tr-2",
             type: "sound",
-            icon: "🟢",
+            signal: "🟢",
             title: "Head tilt back + 'H1",
          // audio: "",
             meaning: "No",
@@ -298,7 +324,7 @@ const COUNTRIES = [{
 
             id: "tr-3",
             type: "sound",
-            icon: "🟡",
+            signal: "🟡",
             title: "Tsk/Tut sound",
          // audio: "",
             meaning: "No, disapproval",
@@ -314,7 +340,7 @@ const COUNTRIES = [{
         mannerisms: [{
             id: "gr-1",
             type: "gesture",
-            icon: "🟢",
+            signal: "🟢",
             title: "Nod up",
             meaning: "yes, approval",
             context: "Friendly agreement",
@@ -322,7 +348,7 @@ const COUNTRIES = [{
 
             id: "gr-2",
             type: "sound",
-            icon: "🟢",
+            signal: "🟢",
             title: "Opa!",
              // image: "",
             meaning: "Expression of hoy, celebration, encouragement 'Whoops' ",
@@ -332,7 +358,7 @@ const COUNTRIES = [{
 
             id: "gr-3",
             type: "gesture",
-            icon: "🟡",
+            signal: "🟡",
             title: "Palm out 'Mooutza'",
              // image: "",
             meaning: "Stop/Get lost",
@@ -343,75 +369,75 @@ const COUNTRIES = [{
 
             id: "gr-4",
             type: "gesture",
-            icon: "🔴",
+            signal: "🔴",
             title: "Thumbs up 👍",
              // image: "",
             meaning: "Offensive gesture",
             context: "Can mean 'up yours'",
             usage_tip: "May offend if used, avoid!",
             equivalent: "🇬🇧 'Up yours''",
-
-            
-           
-
-     
-          
-
-
-      
         }],
 
          code:'uk',
         label: "United Kingdom",
-        flags:'🇬🇬🇧',
+        flags:'🇬🇧',
         mannerisms: [{
-            // id: "gr-1",
-            // type: "gesture",
-            // icon: "🟢",
-            // title: "Nod up",
-            // meaning: "yes, approval",
-            // context: "Friendly agreement",
-            // usage_tip: "safe to use. Slight upward nod",
+            
+            id: "uk-1",
+            type: "vocal",
+            signal: "🟢",
+            title: "Saying 'cheers'",
+            meaning: "Thank you / Bye / Good",
+            context: "Used for thanks in shops, pubs, with friend",
+            usage_tip: "Most versatile UK word",
 
-            // id: "gr-2",
-            // type: "sound",
-            // icon: "🟢",
-            // title: "Opa!",
-            //  // image: "",
-            // meaning: "Expression of hoy, celebration, encouragement 'Whoops' ",
-            // context: "Weddings, dancing, plate breaking, spilling something, dancing the syrtaki",
-            // usage_tip: "safe to use. Shout it when excited, when someone dances well, or when you drop something. Gets louder with more retsina🍷",
-            // equivalent: "🇬🇧 'Oops!', 'Woo', 'Let's go'",
+            id: "uk-2",
+            type: "gesture",
+            signal: "🟢",
+            title: "OK sign",
+             // image: "",
+            meaning: "OK, good ",
+            context: "Friendly, agreement. But be careful in some regions",
+            usage_tip: "Safe and common",
+            equivalent: "All good'",
 
-            // id: "gr-3",
-            // type: "gesture",
-            // icon: "🟡",
-            // title: "Palm out 'Mooutza'",
-            //  // image: "",
-            // meaning: "Stop/Get lost",
-            // context: "Non-verbal insult",
-            // usage_tip: "Exercise caution. Only use playfully with close friends",
-            // equivalent: "🇬🇧 'nope''",
+            id: "uk-3",
+            type: "gesture",
+            signal: "🟡",
+            title: "Peace sign / Two fingers",
+             // image: "",
+            meaning: "Peace OR insult",
+            context: "Palm facing out = peace. Palm facing in = 'up yours' - very rude",
+            usage_tip: "Always show palm out unless you mean to offend",
+            equivalent: "V for victory / 'F off'",
 
 
-            // id: "gr-4",
-            // type: "gesture",
-            // icon: "🔴",
-            // title: "Thumbs up 👍",
-            //  // image: "",
-            // meaning: "Offensive gesture",
-            // context: "Can mean 'up yours'",
-            // usage_tip: "May offend if used, avoid!",
-            // equivalent: "🇬🇧 'Up yours''",
+            id: "uk-4",
+            type: "gesture",
+            signal: "🟢",
+            title: "Thumbs up 👍",
+             // image: "",
+            meaning: "Good, agreed, well done",
+            context: "Super common and friendly",
+            usage_tip: "Totally safe",
+            equivalent: "Nice one",
+
+            id: "uk-5",
+            type: "body language",
+            signal: "🟢",
+            title: "Polite smile + nod",
+             // image: "",
+            meaning: "Acknowledgement",
+            context: "Used when passing someone, saying sorry, or in queues",
+            usage_tip: "Brits over-apologise. 'Sorry' means excuse me too",
+            equivalent: "Cheers",
 
 
           }]
+         
           }]
-        
-
-      
     
-
+          module.exports ={COUNTRY};
 
 
 
